@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr" class="bg-black text-white">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjamin Malet | Portfolio Sponsoring & Brand Activation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+        body { font-family: 'Inter', sans-serif; background-color: #000; overflow-x: hidden; }
+        h1, h2, h3, .editorial-tag { font-family: 'Syncopate', sans-serif; letter-spacing: -0.02em; }
+
+        /* Cinématographie & Overlays */
+        .vignette-overlay {
+            position: absolute; inset: 0; z-index: 5;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%),
+                        radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+        }
+
+        /* Animations d'apparition (Intersection Observer) */
+        .story-beat { opacity: 0; transform: translateY(40px) scale(0.98); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); filter: blur(5px); }
+        .story-beat.active { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
+
+        .editorial-tag { display: block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
+        .editorial-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; text-transform: uppercase; }
+        .editorial-paragraph { font-size: clamp(1rem, 1.5vw, 1.25rem); line-height: 1.6; color: rgba(255,255,255,0.8); max-width: 600px; margin-bottom: 2rem; }
+
+        /* Grille de KPIs */
+        .metrics-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 600px; margin-top: 2rem; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; }
+        .metric-box { display: flex; flex-direction: column; }
+        .metric-val { font-family: 'Syncopate', sans-serif; font-size: 1.75rem; font-weight: 700; color: #fff; }
+        .metric-label { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem; }
+
+        /* Jauge de progression */
+        .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: #fff; z-index: 100; transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear; }
+
+        /* Prompteur de Scroll */
+        .scroll-prompter { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.6; z-index: 50; }
+        .scroll-line { width: 1px; height: 60px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden; margin-top: 10px; }
+        .scroll-line::after { content: ''; position: absolute; top: -50%; left: 0; width: 1px; height: 50%; background: #fff; animation: scrollDown 2s infinite ease-in-out; }
+        @keyframes scrollDown { 0% { top: -50%; } 100% { top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <!-- Jauge de progression horizontale -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- ÉCRAN D'ACCUEIL -->
+    <section class="relative h-screen flex flex-col justify-center px-8 md:px-24 z-10">
+        <span class="editorial-tag">PORTFOLIO</span>
+        <h1 class="text-5xl md:text-8xl font-bold uppercase leading-none mb-6 font-['Syncopate']">Benjamin<br>Malet</h1>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12">2,5 ans d'expérience en agence et chez l'annonceur. Pilotage de campagnes 360°, idéation de brand content et activations stratégiques.</p>
+
+        <div class="scroll-prompter">
+            <span class="text-xs tracking-[0.2em] font-bold uppercase">Défiler</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 01 : TOTALENERGIES X SECTION PALOISE -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/Video_Project_total_section.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[01] BRAND CONTENT • TOP 14</span>
+                    <h2 class="editorial-title">TOTALENERGIES <br> LE DÉFI DE L'IMPOSTEUR</h2>
+                    <p class="editorial-paragraph">Pilotage de la production terrain lors du Media Day. Mise en scène des joueurs cadres face à un casting de supporters pour démasquer l'intrus. Une régie millimétrée au service du storytelling d'activation.</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">Format</span>
+                            <span class="metric-label">In-stream ludique</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">100%</span>
+                            <span class="metric-label">Fan Engagement</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 02 : CMA CGM X DECATHLON -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403245/Decathlon_CMA_CGM_-_The_Container_Challenge.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[02] CRÉATION & INFLUENCE • CYCLISME</span>
+                    <h2 class="editorial-title">CMA CGM <br> CONTAINER CHALLENGE</h2>
+                    <p class="editorial-paragraph">Lancement d'un film Manifesto et orchestration d'une campagne d'influence ciblée (Nogodi) pour maximiser la résonance d'un dispositif gamifié et disruptif.</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">360°</span>
+                            <span class="metric-label">Owned, Earned, Paid</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">Créateurs</span>
+                            <span class="metric-label">Campagne d'influence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 03 : CEVA LOGISTICS X SCUDERIA FERRARI -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[03] CONSEIL & STRATÉGIE • FORMULE 1</span>
+                    <h2 class="editorial-title">CEVA X FERRARI <br> PERFECT MATCH</h2>
+                    <p class="editorial-paragraph">Accompagnement stratégique sur l'activation globale du partenariat Scuderia Ferrari. Analyse de marque, mesure rigoureuse du ROI/ROE et des KPIs sociaux pour maximiser l'impact du dispositif.</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">ROI/ROE</span>
+                            <span class="metric-label">Analyse de performance</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">Mensuel</span>
+                            <span class="metric-label">Reporting & Stratégie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 04 : AG2R LA MONDIALE -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Video_by_ag2rlamondiale_atoutesallures_1.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[04] BRAND CONTENT & ACTIVATION</span>
+                    <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
+                    <p class="editorial-paragraph">Lancement de séries de contenus multi-plateformes (budget de 30 k€) et gestion opérationnelle d'envergure sur les routes du Tour de France avec ASO et la FFC.</p>
+
+                    <div class="metrics-grid">
+                        <div class="metric-box">
+                            <span class="metric-val">+3000</span>
+                            <span class="metric-label">Personnes accueillies / TDF</span>
+                        </div>
+                        <div class="metric-box">
+                            <span class="metric-val">30 k€</span>
+                            <span class="metric-label">Budget de production</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOCK DE CONTACT (Mobile & Desktop) -->
+    <footer class="relative z-50 bg-[#0a0a0a] border-t border-gray-800 py-12 px-8 text-center">
+        <h2 class="text-3xl font-bold font-['Syncopate'] mb-8 uppercase">Prêt à accélérer ?</h2>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="mailto:benjamin.malet@hotmail.com" class="px-6 py-3 bg-white text-black font-bold text-sm tracking-widest uppercase hover:bg-gray-200 transition">Email</a>
+            <a href="tel:+33785304030" class="px-6 py-3 border border-white text-white font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-black transition">Appel</a>
+            <a href="https://linkedin.com/in/malet-benjamin" target="_blank" class="px-6 py-3 border border-white text-white font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-black transition">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Jauge de défilement globale
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            document.getElementById("progressBar").style.transform = `scaleX(${winScroll / height})`;
+        });
+
+        // Apparition progressive des textes
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, { threshold: 0.3 }); // Déclenche quand 30% du bloc est visible
+
+        document.querySelectorAll('.story-beat').forEach(beat => observer.observe(beat));
+    </script>
+</body>
+</html>
