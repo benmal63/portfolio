@@ -89,6 +89,15 @@
         .hero-index a { font-family: 'Syncopate', sans-serif; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.55); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; transition: color 0.2s ease, border-color 0.2s ease; }
         .hero-index a:hover { color: #fff; border-color: #fff; }
         .hero-index a .num { color: rgba(255,255,255,0.35); margin-right: 0.4rem; }
+
+        /* Mosaïque de projets */
+        .mosaic-tile { position: relative; display: block; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #050505; }
+        .mosaic-tile video, .mosaic-tile .fallback-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .mosaic-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.3) 100%); transition: background 0.3s ease; }
+        .mosaic-tile:hover .mosaic-overlay { background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.02) 60%, rgba(0,0,0,0.15) 100%); }
+        .mosaic-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.9rem 1rem; }
+        .mosaic-num { display: block; font-family: 'Syncopate', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin-bottom: 0.25rem; }
+        .mosaic-name { font-family: 'Syncopate', sans-serif; font-size: clamp(0.8rem, 2vw, 1.1rem); font-weight: 700; text-transform: uppercase; color: #fff; line-height: 1.2; }
     </style>
 </head>
 <body>
@@ -101,6 +110,7 @@
     <nav class="nav-overlay" id="navOverlay">
         <div class="nav-overlay-list">
             <a href="#accueil"><span><span class="nav-num">00</span>Accueil</span></a>
+            <a href="#apercu"><span><span class="nav-num">00</span>Vue d'ensemble</span></a>
             <a href="#totalenergies"><span><span class="nav-num">01</span>TotalEnergies</span></a>
             <a href="#cma-decathlon"><span><span class="nav-num">02</span>CMA CGM × Décathlon</span></a>
             <a href="#cma-om"><span><span class="nav-num">03</span>CMA CGM × OM</span></a>
@@ -138,6 +148,53 @@
         <div class="scroll-prompter">
             <span class="text-xs tracking-[0.2em] font-bold uppercase">Défiler</span>
             <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- VUE D'ENSEMBLE — MOSAÏQUE DES PROJETS -->
+    <section id="apercu" class="relative py-24 px-8 md:px-24 bg-black z-10">
+        <div class="story-beat max-w-2xl mb-10">
+            <span class="editorial-tag">VUE D'ENSEMBLE</span>
+            <h2 class="editorial-title">TOUS LES PROJETS</h2>
+            <p class="editorial-paragraph">Un aperçu d'ensemble avant de plonger dans le détail de chaque histoire.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 grid-flow-row-dense gap-3 md:gap-4 story-beat">
+            <a href="#totalenergies" class="mosaic-tile aspect-square col-span-2 row-span-2">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/Video_Project_total_section.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">01</span><span class="mosaic-name">TotalEnergies</span></div>
+            </a>
+            <a href="#cma-decathlon" class="mosaic-tile aspect-square">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403245/Decathlon_CMA_CGM_-_The_Container_Challenge.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">02</span><span class="mosaic-name">CMA CGM × Décathlon</span></div>
+            </a>
+            <a href="#cma-om" class="mosaic-tile aspect-square">
+                <div class="fallback-bg"></div>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">03</span><span class="mosaic-name">CMA CGM × OM</span></div>
+            </a>
+            <a href="#ceva" class="mosaic-tile aspect-square">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">04</span><span class="mosaic-name">CEVA × Ferrari</span></div>
+            </a>
+            <a href="#ag2r-tdf" class="mosaic-tile aspect-square">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">05</span><span class="mosaic-name">AG2R — Tour de France</span></div>
+            </a>
+            <a href="#ag2r-escrime" class="mosaic-tile aspect-square col-span-2">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">06</span><span class="mosaic-name">AG2R — Escrime</span></div>
+            </a>
+            <a href="#bpce" class="mosaic-tile aspect-square col-span-2">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">07</span><span class="mosaic-name">BPCE — Défi Image</span></div>
+            </a>
         </div>
     </section>
 
