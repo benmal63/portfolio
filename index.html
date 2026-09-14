@@ -66,6 +66,9 @@
 
         /* Sommaire / navigation */
         .nav-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(6px); font-size: 1.25rem; }
+        .avatar-bubble { position: fixed; top: 1.5rem; right: 5.25rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.4); display: block; }
+        .avatar-bubble img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.2); transition: filter 0.2s ease; }
+        .avatar-bubble:hover img { filter: grayscale(0); }
         .nav-overlay { position: fixed; inset: 0; z-index: 150; background: rgba(0,0,0,0.97); display: flex; flex-direction: column; justify-content: center; padding: 5rem 2rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; overflow-y: auto; }
         .nav-overlay.open { opacity: 1; pointer-events: auto; }
         .nav-overlay-list { max-width: 42rem; margin: 0 auto; width: 100%; }
@@ -111,11 +114,15 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- SOMMAIRE -->
+    <a href="#parcours" class="avatar-bubble" aria-label="Voir mon parcours">
+        <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/WhatsApp_Image_2025-05-06_at_11.18.30_1.jpg" alt="Benjamin Malet">
+    </a>
     <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le sommaire">☰</button>
     <nav class="nav-overlay" id="navOverlay">
         <div class="nav-overlay-list">
             <a href="#accueil"><span><span class="nav-num">00</span>Accueil</span></a>
             <a href="#apercu"><span><span class="nav-num">00</span>Vue d'ensemble</span></a>
+            <a href="#parcours"><span><span class="nav-num">00</span>Mon parcours</span></a>
             <a href="#totalenergies"><span><span class="nav-num">01</span>TotalEnergies</span></a>
             <a href="#cma-decathlon"><span><span class="nav-num">02</span>CMA CGM × Décathlon</span></a>
             <a href="#cma-team"><span><span class="nav-num">03</span>CMA CGM Team</span></a>
@@ -125,8 +132,7 @@
             <a href="#ag2r-vivons-velo"><span><span class="nav-num">07</span>AG2R LA MONDIALE — Vivons Vélo</span></a>
             <a href="#ag2r-escrime"><span><span class="nav-num">08</span>AG2R LA MONDIALE — Escrime</span></a>
             <a href="#bpce"><span><span class="nav-num">09</span>BPCE — Défi Image</span></a>
-            <a href="#parcours"><span><span class="nav-num">10</span>Mon parcours</span></a>
-            <a href="#contact"><span><span class="nav-num">11</span>Contact</span></a>
+            <a href="#contact"><span><span class="nav-num">10</span>Contact</span></a>
         </div>
     </nav>
 
@@ -151,7 +157,6 @@
                 <a href="#ag2r-vivons-velo"><span class="num">07</span>AG2R LA MONDIALE — Vivons Vélo</a>
                 <a href="#ag2r-escrime"><span class="num">08</span>AG2R LA MONDIALE — Escrime</a>
                 <a href="#bpce"><span class="num">09</span>BPCE</a>
-                <a href="#parcours"><span class="num">10</span>Mon parcours</a>
             </div>
         </div>
 
@@ -215,6 +220,49 @@
                 <div class="mosaic-overlay"></div>
                 <div class="mosaic-caption"><span class="mosaic-num">09</span><span class="mosaic-name">BPCE — Défi Image</span></div>
             </a>
+        </div>
+    </section>
+
+    <!-- MON PARCOURS — RÉCIT -->
+    <section id="parcours" class="relative py-32 px-8 md:px-24 bg-black z-10">
+        <div class="grid md:grid-cols-[auto_1fr] gap-8 md:gap-14 items-start">
+            <div class="portrait-duo story-beat">
+                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/WhatsApp_Image_2025-05-06_at_11.18.30_1.jpg" alt="Benjamin Malet">
+                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/1669107665911.jpg" alt="Benjamin Malet">
+            </div>
+            <div class="story-beat max-w-3xl">
+                <span class="editorial-tag">MON PARCOURS</span>
+                <h2 class="editorial-title">RACONTER LE SPONSORING <br> DES DEUX CÔTÉS</h2>
+                <p class="editorial-paragraph">J'ai commencé par l'intérieur — chez l'annonceur, là où une marque décide d'investir dans le sport et d'exploiter ses droits. Puis je suis passé de l'autre côté du miroir, en agence, à exécuter ces mêmes choix pour le compte d'autres marques, sous contrainte de délai et de budget. Peu de profils à mon niveau d'expérience ont vu les deux visages du métier. Voici comment je les raconte.</p>
+            </div>
+        </div>
+
+        <div class="marquee">
+            <div class="marquee-track">
+                <span>STRATÉGIE SOCIAL MEDIA</span><span>PRODUCTION DE CONTENU</span><span>RELATION AYANTS DROIT</span><span>ÉVÉNEMENTIEL</span><span>GESTION DE COMPTE</span><span>INFLUENCE</span><span>MÉDIA PAYANT</span><span>COORDINATION DE PRESTATAIRES</span><span>NÉGOCIATION</span><span>COMMUNITY MANAGEMENT</span>
+                <span>STRATÉGIE SOCIAL MEDIA</span><span>PRODUCTION DE CONTENU</span><span>RELATION AYANTS DROIT</span><span>ÉVÉNEMENTIEL</span><span>GESTION DE COMPTE</span><span>INFLUENCE</span><span>MÉDIA PAYANT</span><span>COORDINATION DE PRESTATAIRES</span><span>NÉGOCIATION</span><span>COMMUNITY MANAGEMENT</span>
+            </div>
+        </div>
+
+        <div class="timeline mt-16">
+            <div class="timeline-node story-beat">
+                <span class="editorial-tag">01 — CÔTÉ ANNONCEUR</span>
+                <h3>AG2R La Mondiale</h3>
+                <p>Tout commence en stage, sur du community management et de la création de contenu pour un portefeuille de propriétés sportives : une équipe cycliste professionnelle, des escrimeurs sous contrat, et la plateforme de marque Vivons Vélo. L'alternance qui suit élargit le rôle vers l'amont — je construis la stratégie social media, je bâtis et pilote le calendrier éditorial, je mesure la performance et j'en tire des bilans. J'organise aussi des tournages avec les athlètes, escrimeurs et coureurs, et je pousse l'internalisation de la production en équipant l'équipe en matériel vidéo.</p>
+                <p class="mt-4">Sur le terrain, je gère la relation avec ASO et avec l'équipe cycliste, mon interlocuteur principal, et j'anime des réunions de coopération pour trouver les synergies entre les parties. Deux éditions du Tour de France, 2023 et 2024, où je pilote l'activation de parkings à vélo avec ASO — intégration technique du parcours de réservation, négociation d'une mise en avant éditoriale, et gestion de l'hospitalité sur place. En parallèle, j'anime la communauté Vivons Vélo, digitale et physique, sur cinq dates annuelles pilotées avec une agence partenaire — dont je co-construis la refonte, en passant de plusieurs événements par date à un événement unique, plus fort.</p>
+                <p class="pull-quote">Ce dont je suis le plus fier : avoir créé les instances de dialogue qui n'existaient pas, et obtenu un accord sur des règles du jeu partagées entre des parties qui ne se parlaient pas.</p>
+            </div>
+
+            <div class="timeline-node story-beat">
+                <span class="editorial-tag">02 — CÔTÉ AGENCE</span>
+                <h3>SPORTFIVE</h3>
+                <p>Changement de perspective : je passe en agence, où j'apprends à servir la stratégie d'autres marques, en parallèle et sous validation client. Sur BPCE, je prends en main l'ensemble de la chaîne opérationnelle de l'événement interne — prestataires, bénévoles, arbitres, logistique sur site, du montage au déroulé. Sur TotalEnergies, je porte de bout en bout le media day organisé à Pau avec la Section Paloise : idéation des contenus, présence sur le tournage avec la production, suivi de post-production, jusqu'à participer à la présentation du plan d'activation annuel au client.</p>
+                <p class="mt-4">Je lance ensuite le compte CMA CGM, d'abord autour de l'Olympique de Marseille — contenus sur la Champions League et les affiches marquantes de Ligue 1, en pilotant un studio créatif — puis sur Décathlon. Sur le cyclisme, j'organise une fan zone pendant le Tour de France : relation prestataires, partenariats médias, et mon premier cycle complet d'influence, du sourcing des créateurs à leur activation sur place. Sur CEVA Logistics, je construis puis déploie un plan d'amplification combinant influence, campagne payante et contenus. Et je contribue à la réponse — remportée — à l'appel d'offres Sanofi.</p>
+            </div>
+        </div>
+
+        <div class="story-beat max-w-2xl">
+            <p class="editorial-paragraph">Cette double lecture — la stratégie d'un côté, l'exécution de l'autre — n'est pas qu'une ligne de CV. C'est ce qui me permet de me présenter aussi bien côté marque que côté agence, sans jamais changer d'histoire.</p>
         </div>
     </section>
 
@@ -439,49 +487,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- MON PARCOURS — RÉCIT -->
-    <section id="parcours" class="relative py-32 px-8 md:px-24 bg-black z-10">
-        <div class="grid md:grid-cols-[auto_1fr] gap-8 md:gap-14 items-start">
-            <div class="portrait-duo story-beat">
-                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/WhatsApp_Image_2025-05-06_at_11.18.30_1.jpg" alt="Benjamin Malet">
-                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/1669107665911.jpg" alt="Benjamin Malet">
-            </div>
-            <div class="story-beat max-w-3xl">
-                <span class="editorial-tag">MON PARCOURS</span>
-                <h2 class="editorial-title">RACONTER LE SPONSORING <br> DES DEUX CÔTÉS</h2>
-                <p class="editorial-paragraph">J'ai commencé par l'intérieur — chez l'annonceur, là où une marque décide d'investir dans le sport et d'exploiter ses droits. Puis je suis passé de l'autre côté du miroir, en agence, à exécuter ces mêmes choix pour le compte d'autres marques, sous contrainte de délai et de budget. Peu de profils à mon niveau d'expérience ont vu les deux visages du métier. Voici comment je les raconte.</p>
-            </div>
-        </div>
-
-        <div class="marquee">
-            <div class="marquee-track">
-                <span>STRATÉGIE SOCIAL MEDIA</span><span>PRODUCTION DE CONTENU</span><span>RELATION AYANTS DROIT</span><span>ÉVÉNEMENTIEL</span><span>GESTION DE COMPTE</span><span>INFLUENCE</span><span>MÉDIA PAYANT</span><span>COORDINATION DE PRESTATAIRES</span><span>NÉGOCIATION</span><span>COMMUNITY MANAGEMENT</span>
-                <span>STRATÉGIE SOCIAL MEDIA</span><span>PRODUCTION DE CONTENU</span><span>RELATION AYANTS DROIT</span><span>ÉVÉNEMENTIEL</span><span>GESTION DE COMPTE</span><span>INFLUENCE</span><span>MÉDIA PAYANT</span><span>COORDINATION DE PRESTATAIRES</span><span>NÉGOCIATION</span><span>COMMUNITY MANAGEMENT</span>
-            </div>
-        </div>
-
-        <div class="timeline mt-16">
-            <div class="timeline-node story-beat">
-                <span class="editorial-tag">01 — CÔTÉ ANNONCEUR</span>
-                <h3>AG2R La Mondiale</h3>
-                <p>Tout commence en stage, sur du community management et de la création de contenu pour un portefeuille de propriétés sportives : une équipe cycliste professionnelle, des escrimeurs sous contrat, et la plateforme de marque Vivons Vélo. L'alternance qui suit élargit le rôle vers l'amont — je construis la stratégie social media, je bâtis et pilote le calendrier éditorial, je mesure la performance et j'en tire des bilans. J'organise aussi des tournages avec les athlètes, escrimeurs et coureurs, et je pousse l'internalisation de la production en équipant l'équipe en matériel vidéo.</p>
-                <p class="mt-4">Sur le terrain, je gère la relation avec ASO et avec l'équipe cycliste, mon interlocuteur principal, et j'anime des réunions de coopération pour trouver les synergies entre les parties. Deux éditions du Tour de France, 2023 et 2024, où je pilote l'activation de parkings à vélo avec ASO — intégration technique du parcours de réservation, négociation d'une mise en avant éditoriale, et gestion de l'hospitalité sur place. En parallèle, j'anime la communauté Vivons Vélo, digitale et physique, sur cinq dates annuelles pilotées avec une agence partenaire — dont je co-construis la refonte, en passant de plusieurs événements par date à un événement unique, plus fort.</p>
-                <p class="pull-quote">Ce dont je suis le plus fier : avoir créé les instances de dialogue qui n'existaient pas, et obtenu un accord sur des règles du jeu partagées entre des parties qui ne se parlaient pas.</p>
-            </div>
-
-            <div class="timeline-node story-beat">
-                <span class="editorial-tag">02 — CÔTÉ AGENCE</span>
-                <h3>SPORTFIVE</h3>
-                <p>Changement de perspective : je passe en agence, où j'apprends à servir la stratégie d'autres marques, en parallèle et sous validation client. Sur BPCE, je prends en main l'ensemble de la chaîne opérationnelle de l'événement interne — prestataires, bénévoles, arbitres, logistique sur site, du montage au déroulé. Sur TotalEnergies, je porte de bout en bout le media day organisé à Pau avec la Section Paloise : idéation des contenus, présence sur le tournage avec la production, suivi de post-production, jusqu'à participer à la présentation du plan d'activation annuel au client.</p>
-                <p class="mt-4">Je lance ensuite le compte CMA CGM, d'abord autour de l'Olympique de Marseille — contenus sur la Champions League et les affiches marquantes de Ligue 1, en pilotant un studio créatif — puis sur Décathlon. Sur le cyclisme, j'organise une fan zone pendant le Tour de France : relation prestataires, partenariats médias, et mon premier cycle complet d'influence, du sourcing des créateurs à leur activation sur place. Sur CEVA Logistics, je construis puis déploie un plan d'amplification combinant influence, campagne payante et contenus. Et je contribue à la réponse — remportée — à l'appel d'offres Sanofi.</p>
-            </div>
-        </div>
-
-        <div class="story-beat max-w-2xl">
-            <p class="editorial-paragraph">Cette double lecture — la stratégie d'un côté, l'exécution de l'autre — n'est pas qu'une ligne de CV. C'est ce qui me permet de me présenter aussi bien côté marque que côté agence, sans jamais changer d'histoire.</p>
         </div>
     </section>
 
