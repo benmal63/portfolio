@@ -66,6 +66,15 @@
         .scroll-line { width: 1px; height: 60px; background: rgba(255,255,255,0.2); position: relative; overflow: hidden; margin-top: 10px; }
         .scroll-line::after { content: ''; position: absolute; top: -50%; left: 0; width: 1px; height: 50%; background: #fff; animation: scrollDown 2s infinite ease-in-out; }
         @keyframes scrollDown { 0% { top: -50%; } 100% { top: 100%; } }
+
+        /* Sommaire / navigation */
+        .nav-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(6px); font-size: 1.25rem; }
+        .nav-overlay { position: fixed; inset: 0; z-index: 150; background: rgba(0,0,0,0.97); display: flex; flex-direction: column; justify-content: center; padding: 5rem 2rem; opacity: 0; pointer-events: none; transition: opacity 0.4s ease; overflow-y: auto; }
+        .nav-overlay.open { opacity: 1; pointer-events: auto; }
+        .nav-overlay-list { max-width: 42rem; margin: 0 auto; width: 100%; }
+        .nav-overlay a { font-family: 'Syncopate', sans-serif; text-transform: uppercase; font-size: clamp(1rem, 2.6vw, 1.6rem); color: #fff; text-decoration: none; padding: 0.85rem 0; border-bottom: 1px solid rgba(255,255,255,0.12); display: flex; justify-content: space-between; align-items: center; transition: color 0.2s ease; }
+        .nav-overlay a:hover { color: rgba(255,255,255,0.5); }
+        .nav-overlay a .nav-num { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-right: 1.5rem; }
     </style>
 </head>
 <body>
@@ -73,11 +82,28 @@
     <!-- Jauge de progression horizontale -->
     <div class="progress-bar" id="progressBar"></div>
 
+    <!-- SOMMAIRE -->
+    <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le sommaire">☰</button>
+    <nav class="nav-overlay" id="navOverlay">
+        <div class="nav-overlay-list">
+            <a href="#accueil"><span><span class="nav-num">00</span>Accueil</span></a>
+            <a href="#totalenergies"><span><span class="nav-num">01</span>TotalEnergies</span></a>
+            <a href="#cma-decathlon"><span><span class="nav-num">02</span>CMA CGM × Décathlon</span></a>
+            <a href="#cma-om"><span><span class="nav-num">03</span>CMA CGM × OM</span></a>
+            <a href="#ceva"><span><span class="nav-num">04</span>CEVA × Ferrari</span></a>
+            <a href="#ag2r-tdf"><span><span class="nav-num">05</span>AG2R — Tour de France</span></a>
+            <a href="#ag2r-escrime"><span><span class="nav-num">06</span>AG2R — Escrime</span></a>
+            <a href="#bpce"><span><span class="nav-num">07</span>BPCE — Défi Image</span></a>
+            <a href="#parcours"><span><span class="nav-num">08</span>Mon parcours</span></a>
+            <a href="#contact"><span><span class="nav-num">09</span>Contact</span></a>
+        </div>
+    </nav>
+
     <!-- ÉCRAN D'ACCUEIL -->
-    <section class="relative h-screen flex flex-col justify-center px-8 md:px-24 z-10">
+    <section id="accueil" class="relative h-screen flex flex-col justify-center px-8 md:px-24 z-10">
         <span class="editorial-tag">PORTFOLIO</span>
         <h1 class="text-5xl md:text-8xl font-bold uppercase leading-none mb-6 font-['Syncopate']">Benjamin<br>Malet</h1>
-        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12">2,5 ans d'expérience en agence et chez l'annonceur. Pilotage de campagnes 360°, idéation de brand content et activations stratégiques.</p>
+        <p class="text-xl md:text-2xl text-gray-400 max-w-2xl mb-12">J'ai vu le sponsoring sportif des deux côtés du terrain : chez l'annonceur, où l'on décide d'investir dans le sport, puis en agence, où l'on active ces choix pour d'autres marques. Voici les histoires qui en résultent — TotalEnergies, CMA CGM, CEVA Logistics, AG2R La Mondiale, BPCE.</p>
 
         <div class="scroll-prompter">
             <span class="text-xs tracking-[0.2em] font-bold uppercase">Défiler</span>
@@ -86,25 +112,25 @@
     </section>
 
     <!-- CHAPITRE 01 : TOTALENERGIES X SECTION PALOISE -->
-    <section class="relative h-[200vh]">
+    <section id="totalenergies" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/Video_Project_total_section.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[01] BRAND CONTENT • TOP 14</span>
-                    <h2 class="editorial-title">TOTALENERGIES <br> LE DÉFI DE L'IMPOSTEUR</h2>
-                    <p class="editorial-paragraph">Pilotage de la production terrain lors du Media Day. Mise en scène des joueurs cadres face à un casting de supporters pour démasquer l'intrus. Une régie millimétrée au service du storytelling d'activation.</p>
+                    <span class="editorial-tag">[01] TOTALENERGIES — RUGBY</span>
+                    <h2 class="editorial-title">LE DÉFI <br> DE L'IMPOSTEUR</h2>
+                    <p class="editorial-paragraph">Sur le compte TotalEnergies, j'ai porté de bout en bout le media day organisé à Pau avec la Section Paloise : mettre en scène les joueurs cadres face à un casting de supporters, et laisser le public démasquer l'intrus. J'ai imaginé le format, suivi le tournage aux côtés de la production, géré la post-production, et contribué à présenter le plan d'activation annuel au client.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
-                            <span class="metric-val">Format</span>
-                            <span class="metric-label">In-stream ludique</span>
+                            <span class="metric-val">Idée à validation</span>
+                            <span class="metric-label">Media day piloté de bout en bout</span>
                         </div>
                         <div class="metric-box">
-                            <span class="metric-val">100%</span>
-                            <span class="metric-label">Fan Engagement</span>
+                            <span class="metric-val">Top 14</span>
+                            <span class="metric-label">Section Paloise</span>
                         </div>
                     </div>
 
@@ -117,16 +143,16 @@
     </section>
 
     <!-- CHAPITRE 02 : CMA CGM X DECATHLON -->
-    <section class="relative h-[200vh]">
+    <section id="cma-decathlon" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403245/Decathlon_CMA_CGM_-_The_Container_Challenge.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[02] CRÉATION & INFLUENCE • CYCLISME</span>
+                    <span class="editorial-tag">[02] INFLUENCE & CRÉATION — CYCLISME</span>
                     <h2 class="editorial-title">CMA CGM <br> CONTAINER CHALLENGE</h2>
-                    <p class="editorial-paragraph">Lancement d'un film Manifesto et orchestration d'une campagne d'influence ciblée (Nogodi) pour maximiser la résonance d'un dispositif gamifié et disruptif.</p>
+                    <p class="editorial-paragraph">Sur le volet Décathlon du compte CMA CGM, j'ai idéé et écrit des contenus alignés sur la stratégie de la marque, retravaillé le plan d'activation, et lancé un film manifeste. J'ai orchestré autour de lui une campagne d'influence ciblée, du sourcing des créateurs à leur activation, pour maximiser la résonance d'un dispositif gamifié et disruptif.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -148,16 +174,16 @@
     </section>
 
     <!-- CHAPITRE 03 : CMA CGM X OLYMPIQUE DE MARSEILLE -->
-    <section class="relative h-[200vh]">
+    <section id="cma-om" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <div class="fallback-bg"></div>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[03] BRAND CONTENT • FOOTBALL</span>
-                    <h2 class="editorial-title">CMA CGM <br> X OLYMPIQUE DE MARSEILLE</h2>
-                    <p class="editorial-paragraph">Activation du partenariat CMA CGM avec l'Olympique de Marseille : production de contenu et amplification autour du club phare de la ville portuaire.</p>
+                    <span class="editorial-tag">[03] PRODUCTION DE CONTENU — FOOTBALL</span>
+                    <h2 class="editorial-title">CMA CGM <br> OLYMPIQUE DE MARSEILLE</h2>
+                    <p class="editorial-paragraph">J'ai lancé le compte CMA CGM en parallèle de mes autres missions, en commençant par l'Olympique de Marseille. J'ai préparé, idéé et écrit des contenus autour des grands rendez-vous du club — la Ligue des champions, les affiches marquantes de Ligue 1 — en pilotant la relation avec un studio créatif, les allers-retours de validation et le suivi de production.</p>
 
                     <div class="cta-row">
                         <a href="https://www.youtube.com/watch?v=O7jgOmnAeDE" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
@@ -168,25 +194,25 @@
     </section>
 
     <!-- CHAPITRE 04 : CEVA LOGISTICS X SCUDERIA FERRARI -->
-    <section class="relative h-[200vh]">
+    <section id="ceva" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[04] CONSEIL & STRATÉGIE • FORMULE 1</span>
+                    <span class="editorial-tag">[04] EXÉCUTION & AMPLIFICATION — FORMULE 1</span>
                     <h2 class="editorial-title">CEVA X FERRARI <br> PERFECT MATCH</h2>
-                    <p class="editorial-paragraph">Accompagnement stratégique sur l'activation globale du partenariat Scuderia Ferrari. Analyse de marque, mesure rigoureuse du ROI/ROE et des KPIs sociaux pour maximiser l'impact du dispositif.</p>
+                    <p class="editorial-paragraph">J'ai repris le compte CEVA Logistics avec un plan d'activation déjà posé pour le partenariat Scuderia Ferrari : ma mission a été de l'exécuter. J'ai écrit les contenus, piloté leur production, géré les allers-retours de validation avec le client, et suivi le prestataire en charge de la plateforme — avant de construire et déployer un plan d'amplification combinant influence, campagne payante et contenus, puis de contribuer au plan de la saison suivante.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
-                            <span class="metric-val">ROI/ROE</span>
-                            <span class="metric-label">Analyse de performance</span>
+                            <span class="metric-val">Influence + Paid</span>
+                            <span class="metric-label">Plan d'amplification déployé</span>
                         </div>
                         <div class="metric-box">
-                            <span class="metric-val">Mensuel</span>
-                            <span class="metric-label">Reporting & Stratégie</span>
+                            <span class="metric-val">Saison N+1</span>
+                            <span class="metric-label">Contribution au plan suivant</span>
                         </div>
                     </div>
                 </div>
@@ -195,25 +221,25 @@
     </section>
 
     <!-- CHAPITRE 05 : AG2R LA MONDIALE — TOUR DE FRANCE -->
-    <section class="relative h-[200vh]">
+    <section id="ag2r-tdf" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[05] BRAND CONTENT & ACTIVATION • CYCLISME</span>
+                    <span class="editorial-tag">[05] ACTIVATION DE DROITS — CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
-                    <p class="editorial-paragraph">Lancement de séries de contenus multi-plateformes (budget de 30 k€) et gestion opérationnelle d'envergure sur les routes du Tour de France avec ASO et la FFC.</p>
+                    <p class="editorial-paragraph">Sur deux éditions du Tour de France, 2023 et 2024, j'ai piloté l'activation de parkings à vélo mis à disposition du public, en partenariat avec ASO. J'ai géré l'intégration technique entre le site Vivons Vélo et celui d'ASO pour permettre la réservation, négocié une mise en avant éditoriale sur les supports de l'ayant droit, et assuré l'hospitalité et les relations publiques sur place.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
-                            <span class="metric-val">+3000</span>
-                            <span class="metric-label">Personnes accueillies / TDF</span>
+                            <span class="metric-val">2023 & 2024</span>
+                            <span class="metric-label">Deux éditions du Tour de France</span>
                         </div>
                         <div class="metric-box">
-                            <span class="metric-val">30 k€</span>
-                            <span class="metric-label">Budget de production</span>
+                            <span class="metric-val">ASO</span>
+                            <span class="metric-label">Intégration technique & éditoriale</span>
                         </div>
                     </div>
                 </div>
@@ -222,16 +248,16 @@
     </section>
 
     <!-- CHAPITRE 06 : AG2R LA MONDIALE — ESCRIME -->
-    <section class="relative h-[200vh]">
+    <section id="ag2r-escrime" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[06] BRAND CONTENT & ACTIVATION • ESCRIME</span>
+                    <span class="editorial-tag">[06] PRODUCTION DE CONTENU — ESCRIME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> ESCRIME</h2>
-                    <p class="editorial-paragraph">Production de contenu pour l'activation du partenariat AG2R La Mondiale autour de l'escrime, une autre facette de l'engagement sportif de la marque.</p>
+                    <p class="editorial-paragraph">Au-delà du cyclisme, j'ai organisé des tournages avec les escrimeurs sous contrat de la marque — une autre facette du portefeuille sportif que je gérais chez AG2R La Mondiale, avec les mêmes exigences de production que sur l'équipe cycliste.</p>
 
                     <div class="cta-row">
                         <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403751/AQOv4a8SJn-4LG8jIH3kH-hbs23ags-EHiIdbIcLAvJqaSkhAlHnpC89aJCdTEVVLdG5VGmHiXZ7wnHjPWJuitOGEDMo2qjnstw.mp4" target="_blank" rel="noopener" class="cta-link">Voir l'autre format</a>
@@ -242,16 +268,16 @@
     </section>
 
     <!-- CHAPITRE 07 : BPCE — DÉFI IMAGE 2025 -->
-    <section class="relative h-[200vh]">
+    <section id="bpce" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[07] BRAND CONTENT • BANQUE</span>
+                    <span class="editorial-tag">[07] OPÉRATIONNEL ÉVÉNEMENTIEL — BANQUE</span>
                     <h2 class="editorial-title">BPCE <br> DÉFI IMAGE 2025</h2>
-                    <p class="editorial-paragraph">Contribution à la campagne Défi Image 2025 du groupe BPCE : production de contenu au service d'un dispositif de marque à forte visibilité.</p>
+                    <p class="editorial-paragraph">Ma première mission chez SPORTFIVE : accompagner la construction et la production de l'événement interne BPCE, édition Défi Image. J'ai géré la relation avec les prestataires, coordonné les bénévoles et les arbitres, et suivi la logistique sur site — la chaîne opérationnelle complète d'un événement, du montage au déroulé.</p>
 
                     <div class="cta-row">
                         <a href="https://youtu.be/gFSxKDotrck" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film complet</a>
@@ -262,7 +288,7 @@
     </section>
 
     <!-- MON PARCOURS — RÉCIT -->
-    <section class="relative py-32 px-8 md:px-24 bg-black z-10">
+    <section id="parcours" class="relative py-32 px-8 md:px-24 bg-black z-10">
         <div class="story-beat max-w-3xl">
             <span class="editorial-tag">MON PARCOURS</span>
             <h2 class="editorial-title">RACONTER LE SPONSORING <br> DES DEUX CÔTÉS</h2>
@@ -288,7 +314,7 @@
             <div class="timeline-node story-beat">
                 <span class="editorial-tag">02 — CÔTÉ AGENCE</span>
                 <h3>SPORTFIVE</h3>
-                <p>Changement de perspective : je passe en agence, où j'apprends à servir la stratégie d'autres marques, en parallèle et sous validation client. Sur BPCE, je prends en main l'ensemble de la chaîne opérationnelle de l'événement interne BPCE Imagine — prestataires, bénévoles, arbitres, logistique sur site, du montage au déroulé. Sur TotalEnergies, je porte de bout en bout le media day organisé à Pau avec la Section Paloise : idéation des contenus, présence sur le tournage avec la production, suivi de post-production, jusqu'à participer à la présentation du plan d'activation annuel au client.</p>
+                <p>Changement de perspective : je passe en agence, où j'apprends à servir la stratégie d'autres marques, en parallèle et sous validation client. Sur BPCE, je prends en main l'ensemble de la chaîne opérationnelle de l'événement interne — prestataires, bénévoles, arbitres, logistique sur site, du montage au déroulé. Sur TotalEnergies, je porte de bout en bout le media day organisé à Pau avec la Section Paloise : idéation des contenus, présence sur le tournage avec la production, suivi de post-production, jusqu'à participer à la présentation du plan d'activation annuel au client.</p>
                 <p class="mt-4">Je lance ensuite le compte CMA CGM, d'abord autour de l'Olympique de Marseille — contenus sur la Champions League et les affiches marquantes de Ligue 1, en pilotant un studio créatif — puis sur Décathlon. Sur le cyclisme, j'organise une fan zone pendant le Tour de France : relation prestataires, partenariats médias, et mon premier cycle complet d'influence, du sourcing des créateurs à leur activation sur place. Sur CEVA Logistics, je construis puis déploie un plan d'amplification combinant influence, campagne payante et contenus. Et je contribue à la réponse — remportée — à l'appel d'offres Sanofi.</p>
             </div>
         </div>
@@ -299,7 +325,7 @@
     </section>
 
     <!-- DOCK DE CONTACT (Mobile & Desktop) -->
-    <footer class="relative z-50 bg-[#0a0a0a] border-t border-gray-800 py-12 px-8 text-center">
+    <footer id="contact" class="relative z-50 bg-[#0a0a0a] border-t border-gray-800 py-12 px-8 text-center">
         <h2 class="text-3xl font-bold font-['Syncopate'] mb-8 uppercase">Prêt à accélérer ?</h2>
         <div class="flex flex-wrap justify-center gap-4">
             <a href="mailto:benjamin.malet@hotmail.com" class="px-6 py-3 bg-white text-black font-bold text-sm tracking-widest uppercase hover:bg-gray-200 transition">Email</a>
@@ -328,6 +354,20 @@
         }, { threshold: 0.3 }); // Déclenche quand 30% du bloc est visible
 
         document.querySelectorAll('.story-beat').forEach(beat => observer.observe(beat));
+
+        // Sommaire
+        const navToggle = document.getElementById('navToggle');
+        const navOverlay = document.getElementById('navOverlay');
+        navToggle.addEventListener('click', () => {
+            const isOpen = navOverlay.classList.toggle('open');
+            navToggle.textContent = isOpen ? '✕' : '☰';
+        });
+        navOverlay.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navOverlay.classList.remove('open');
+                navToggle.textContent = '☰';
+            });
+        });
     </script>
 </body>
 </html>
