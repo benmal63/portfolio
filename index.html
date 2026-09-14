@@ -39,9 +39,6 @@
         .cta-link.cta-solid { background: #fff; color: #000; }
         .cta-link.cta-solid:hover { background: transparent; color: #fff; }
 
-        /* Fonds sans vidéo */
-        .fallback-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(circle at 30% 20%, #1a1a1a 0%, #000 70%); }
-
         /* Bandeau de compétences défilant */
         .marquee { overflow: hidden; white-space: nowrap; border-top: 1px solid rgba(255,255,255,0.15); border-bottom: 1px solid rgba(255,255,255,0.15); padding: 1.25rem 0; margin: 3rem 0; }
         .marquee-track { display: inline-block; animation: marquee 28s linear infinite; }
@@ -95,7 +92,7 @@
 
         /* Mosaïque de projets */
         .mosaic-tile { position: relative; display: block; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #050505; }
-        .mosaic-tile video, .mosaic-tile .fallback-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .mosaic-tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
         .mosaic-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.05) 60%, rgba(0,0,0,0.3) 100%); transition: background 0.3s ease; }
         .mosaic-tile:hover .mosaic-overlay { background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.02) 60%, rgba(0,0,0,0.15) 100%); }
         .mosaic-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.9rem 1rem; }
@@ -116,13 +113,14 @@
             <a href="#apercu"><span><span class="nav-num">00</span>Vue d'ensemble</span></a>
             <a href="#totalenergies"><span><span class="nav-num">01</span>TotalEnergies</span></a>
             <a href="#cma-decathlon"><span><span class="nav-num">02</span>CMA CGM × Décathlon</span></a>
-            <a href="#cma-om"><span><span class="nav-num">03</span>CMA CGM × OM</span></a>
-            <a href="#ceva"><span><span class="nav-num">04</span>CEVA × Scuderia Ferrari HP</span></a>
-            <a href="#ag2r-tdf"><span><span class="nav-num">05</span>AG2R LA MONDIALE — Tour de France</span></a>
-            <a href="#ag2r-escrime"><span><span class="nav-num">06</span>AG2R LA MONDIALE — Escrime</span></a>
-            <a href="#bpce"><span><span class="nav-num">07</span>BPCE — Défi Image</span></a>
-            <a href="#parcours"><span><span class="nav-num">08</span>Mon parcours</span></a>
-            <a href="#contact"><span><span class="nav-num">09</span>Contact</span></a>
+            <a href="#cma-team"><span><span class="nav-num">03</span>CMA CGM Team</span></a>
+            <a href="#cma-om"><span><span class="nav-num">04</span>CMA CGM × OM</span></a>
+            <a href="#ceva"><span><span class="nav-num">05</span>CEVA × Scuderia Ferrari HP</span></a>
+            <a href="#ag2r-tdf"><span><span class="nav-num">06</span>AG2R LA MONDIALE — Tour de France</span></a>
+            <a href="#ag2r-escrime"><span><span class="nav-num">07</span>AG2R LA MONDIALE — Escrime</span></a>
+            <a href="#bpce"><span><span class="nav-num">08</span>BPCE — Défi Image</span></a>
+            <a href="#parcours"><span><span class="nav-num">09</span>Mon parcours</span></a>
+            <a href="#contact"><span><span class="nav-num">10</span>Contact</span></a>
         </div>
     </nav>
 
@@ -140,12 +138,13 @@
             <div class="hero-index hero-fade delay-5">
                 <a href="#totalenergies"><span class="num">01</span>TotalEnergies</a>
                 <a href="#cma-decathlon"><span class="num">02</span>CMA CGM × Décathlon</a>
-                <a href="#cma-om"><span class="num">03</span>CMA CGM × OM</a>
-                <a href="#ceva"><span class="num">04</span>CEVA × Scuderia Ferrari HP</a>
-                <a href="#ag2r-tdf"><span class="num">05</span>AG2R LA MONDIALE — TDF</a>
-                <a href="#ag2r-escrime"><span class="num">06</span>AG2R LA MONDIALE — Escrime</a>
-                <a href="#bpce"><span class="num">07</span>BPCE</a>
-                <a href="#parcours"><span class="num">08</span>Mon parcours</a>
+                <a href="#cma-team"><span class="num">03</span>CMA CGM Team</a>
+                <a href="#cma-om"><span class="num">04</span>CMA CGM × OM</a>
+                <a href="#ceva"><span class="num">05</span>CEVA × Scuderia Ferrari HP</a>
+                <a href="#ag2r-tdf"><span class="num">06</span>AG2R LA MONDIALE — TDF</a>
+                <a href="#ag2r-escrime"><span class="num">07</span>AG2R LA MONDIALE — Escrime</a>
+                <a href="#bpce"><span class="num">08</span>BPCE</a>
+                <a href="#parcours"><span class="num">09</span>Mon parcours</a>
             </div>
         </div>
 
@@ -174,30 +173,35 @@
                 <div class="mosaic-overlay"></div>
                 <div class="mosaic-caption"><span class="mosaic-num">02</span><span class="mosaic-name">CMA CGM × Décathlon</span></div>
             </a>
-            <a href="#cma-om" class="mosaic-tile aspect-square">
-                <div class="fallback-bg"></div>
+            <a href="#cma-team" class="mosaic-tile aspect-square">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403236/Paul_Seixas_unfiltered_the_mindset_behind_the_rider.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">03</span><span class="mosaic-name">CMA CGM × OM</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">03</span><span class="mosaic-name">CMA CGM Team</span></div>
+            </a>
+            <a href="#cma-om" class="mosaic-tile aspect-square">
+                <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789410470/Video_Project_3_om_cma_cgm.mp4" autoplay loop muted playsinline></video>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">04</span><span class="mosaic-name">CMA CGM × OM</span></div>
             </a>
             <a href="#ceva" class="mosaic-tile aspect-square">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">04</span><span class="mosaic-name">CEVA × Scuderia Ferrari HP</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">05</span><span class="mosaic-name">CEVA × Scuderia Ferrari HP</span></div>
             </a>
             <a href="#ag2r-tdf" class="mosaic-tile aspect-square">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">05</span><span class="mosaic-name">AG2R LA MONDIALE — Tour de France</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">06</span><span class="mosaic-name">AG2R LA MONDIALE — Tour de France</span></div>
             </a>
             <a href="#ag2r-escrime" class="mosaic-tile aspect-square col-span-2">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">06</span><span class="mosaic-name">AG2R LA MONDIALE — Escrime</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">07</span><span class="mosaic-name">AG2R LA MONDIALE — Escrime</span></div>
             </a>
             <a href="#bpce" class="mosaic-tile aspect-square col-span-2">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">07</span><span class="mosaic-name">BPCE — Défi Image</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">08</span><span class="mosaic-name">BPCE — Défi Image</span></div>
             </a>
         </div>
     </section>
@@ -264,27 +268,48 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 03 : CMA CGM X OLYMPIQUE DE MARSEILLE -->
-    <section id="cma-om" class="relative h-[200vh]">
+    <!-- CHAPITRE 03 : CMA CGM TEAM -->
+    <section id="cma-team" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
-            <div class="fallback-bg"></div>
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403236/Paul_Seixas_unfiltered_the_mindset_behind_the_rider.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[03] PRODUCTION DE CONTENU — FOOTBALL</span>
-                    <h2 class="editorial-title">CMA CGM <br> OLYMPIQUE DE MARSEILLE</h2>
-                    <p class="editorial-paragraph">J'ai lancé le compte CMA CGM en parallèle de mes autres missions, en commençant par l'Olympique de Marseille. J'ai préparé, idéé et écrit des contenus autour des grands rendez-vous du club — la Ligue des champions, les affiches marquantes de Ligue 1 — en pilotant la relation avec un studio créatif, les allers-retours de validation et le suivi de production.</p>
+                    <span class="editorial-tag">[03] PRODUCTION DE CONTENU — CYCLISME</span>
+                    <h2 class="editorial-title">CMA CGM <br> TEAM</h2>
+                    <p class="editorial-paragraph">Au-delà des dispositifs de marque, j'ai produit des contenus directement avec les coureurs de l'équipe — comme ce portrait de Paul Seixas, où l'on va chercher au-delà de la performance pour raconter l'état d'esprit du coureur.</p>
 
                     <div class="cta-row">
-                        <a href="https://www.youtube.com/watch?v=O7jgOmnAeDE" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
+                        <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403236/Paul_Seixas_unfiltered_the_mindset_behind_the_rider.mp4" target="_blank" rel="noopener" class="cta-link">Voir le portrait</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CHAPITRE 04 : CEVA LOGISTICS X SCUDERIA FERRARI -->
+    <!-- CHAPITRE 04 : CMA CGM X OLYMPIQUE DE MARSEILLE -->
+    <section id="cma-om" class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789410470/Video_Project_3_om_cma_cgm.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[04] PRODUCTION DE CONTENU — FOOTBALL</span>
+                    <h2 class="editorial-title">CMA CGM <br> OLYMPIQUE DE MARSEILLE</h2>
+                    <p class="editorial-paragraph">J'ai lancé le compte CMA CGM en parallèle de mes autres missions, en commençant par l'Olympique de Marseille. J'ai préparé, idéé et écrit des contenus autour des grands rendez-vous du club — la Ligue des champions, les affiches marquantes de Ligue 1 — en pilotant la relation avec un studio créatif, les allers-retours de validation et le suivi de production.</p>
+
+                    <div class="cta-row">
+                        <a href="https://www.youtube.com/watch?v=O7jgOmnAeDE" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
+                        <a href="https://youtu.be/sZXWBzvE2YU" target="_blank" rel="noopener" class="cta-link">Exemple media day</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 05 : CEVA LOGISTICS X SCUDERIA FERRARI -->
     <section id="ceva" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -292,7 +317,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[04] EXÉCUTION & AMPLIFICATION — FORMULE 1</span>
+                    <span class="editorial-tag">[05] EXÉCUTION & AMPLIFICATION — FORMULE 1</span>
                     <h2 class="editorial-title">CEVA X SCUDERIA FERRARI HP <br> PERFECT MATCH</h2>
                     <p class="editorial-paragraph">J'ai repris le compte CEVA Logistics avec un plan d'activation déjà posé pour le partenariat Scuderia Ferrari HP : ma mission a été de l'exécuter. J'ai écrit les contenus, piloté leur production, géré les allers-retours de validation avec le client, et suivi le prestataire en charge de la plateforme — avant de construire et déployer un plan d'amplification combinant influence, campagne payante et contenus, puis de contribuer au plan de la saison suivante.</p>
 
@@ -311,7 +336,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 05 : AG2R LA MONDIALE — TOUR DE FRANCE -->
+    <!-- CHAPITRE 06 : AG2R LA MONDIALE — TOUR DE FRANCE -->
     <section id="ag2r-tdf" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -319,7 +344,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[05] ACTIVATION DE DROITS — CYCLISME</span>
+                    <span class="editorial-tag">[06] ACTIVATION DE DROITS — CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
                     <p class="editorial-paragraph">Sur deux éditions du Tour de France, 2023 et 2024, j'ai piloté l'activation de parkings à vélo mis à disposition du public, en partenariat avec ASO. J'ai géré l'intégration technique entre le site Vivons Vélo et celui d'ASO pour permettre la réservation, négocié une mise en avant éditoriale sur les supports de l'ayant droit, et assuré l'hospitalité et les relations publiques sur place.</p>
 
@@ -338,7 +363,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 06 : AG2R LA MONDIALE — ESCRIME -->
+    <!-- CHAPITRE 07 : AG2R LA MONDIALE — ESCRIME -->
     <section id="ag2r-escrime" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -346,7 +371,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[06] PRODUCTION DE CONTENU — ESCRIME</span>
+                    <span class="editorial-tag">[07] PRODUCTION DE CONTENU — ESCRIME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> ESCRIME</h2>
                     <p class="editorial-paragraph">Au-delà du cyclisme, j'ai organisé des tournages avec les escrimeurs sous contrat de la marque — une autre facette du portefeuille sportif que je gérais chez AG2R La Mondiale, avec les mêmes exigences de production que sur l'équipe cycliste.</p>
 
@@ -358,7 +383,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 07 : BPCE — DÉFI IMAGE 2025 -->
+    <!-- CHAPITRE 08 : BPCE — DÉFI IMAGE 2025 -->
     <section id="bpce" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -366,7 +391,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[07] OPÉRATIONNEL ÉVÉNEMENTIEL — BANQUE</span>
+                    <span class="editorial-tag">[08] OPÉRATIONNEL ÉVÉNEMENTIEL — BANQUE</span>
                     <h2 class="editorial-title">BPCE <br> DÉFI IMAGE 2025</h2>
                     <p class="editorial-paragraph">Ma première mission chez SPORTFIVE : accompagner la construction et la production de l'événement interne BPCE, édition Défi Image. J'ai géré la relation avec les prestataires, coordonné les bénévoles et les arbitres, et suivi la logistique sur site — la chaîne opérationnelle complète d'un événement, du montage au déroulé.</p>
 
