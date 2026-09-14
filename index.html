@@ -32,6 +32,21 @@
         .metric-val { font-family: 'Syncopate', sans-serif; font-size: 1.75rem; font-weight: 700; color: #fff; }
         .metric-label { font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-top: 0.25rem; }
 
+        /* Liens d'action (CTA) */
+        .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+        .cta-link { display: inline-block; padding: 0.75rem 1.5rem; border: 1px solid #fff; color: #fff; font-weight: 700; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: all 0.3s ease; }
+        .cta-link:hover { background: #fff; color: #000; }
+        .cta-link.cta-solid { background: #fff; color: #000; }
+        .cta-link.cta-solid:hover { background: transparent; color: #fff; }
+
+        /* Fonds sans vidéo */
+        .fallback-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(circle at 30% 20%, #1a1a1a 0%, #000 70%); }
+
+        /* Section compétences */
+        .skill-card { border: 1px solid rgba(255,255,255,0.15); padding: 1.5rem; background: rgba(255,255,255,0.02); }
+        .skill-card h3 { font-size: 0.95rem; font-weight: 700; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.02em; }
+        .skill-card p { font-size: 0.875rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
+
         /* Jauge de progression */
         .progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: #fff; z-index: 100; transform-origin: left; transform: scaleX(0); transition: transform 0.1s linear; }
 
@@ -81,6 +96,10 @@
                             <span class="metric-label">Fan Engagement</span>
                         </div>
                     </div>
+
+                    <div class="cta-row">
+                        <a href="https://totalenergies.com/fr/notre-compagnie/nos-atouts/totalenergies-sport/totalenergies-rugby" target="_blank" rel="noopener" class="cta-link">En savoir plus</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -108,12 +127,36 @@
                             <span class="metric-label">Campagne d'influence</span>
                         </div>
                     </div>
+
+                    <div class="cta-row">
+                        <a href="https://www.youtube.com/watch?v=07AgQ06L2JY" target="_blank" rel="noopener" class="cta-link">Voir le film</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CHAPITRE 03 : CEVA LOGISTICS X SCUDERIA FERRARI -->
+    <!-- CHAPITRE 03 : CMA CGM X OLYMPIQUE DE MARSEILLE -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <div class="fallback-bg"></div>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[03] BRAND CONTENT • FOOTBALL</span>
+                    <h2 class="editorial-title">CMA CGM <br> X OLYMPIQUE DE MARSEILLE</h2>
+                    <p class="editorial-paragraph">Activation du partenariat CMA CGM avec l'Olympique de Marseille : production de contenu et amplification autour du club phare de la ville portuaire.</p>
+
+                    <div class="cta-row">
+                        <a href="https://www.youtube.com/watch?v=O7jgOmnAeDE" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 04 : CEVA LOGISTICS X SCUDERIA FERRARI -->
     <section class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403241/CEVA_Logistics_x_Scuderia_Ferrari_HP_Perfect_Match.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -121,7 +164,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[03] CONSEIL & STRATÉGIE • FORMULE 1</span>
+                    <span class="editorial-tag">[04] CONSEIL & STRATÉGIE • FORMULE 1</span>
                     <h2 class="editorial-title">CEVA X FERRARI <br> PERFECT MATCH</h2>
                     <p class="editorial-paragraph">Accompagnement stratégique sur l'activation globale du partenariat Scuderia Ferrari. Analyse de marque, mesure rigoureuse du ROI/ROE et des KPIs sociaux pour maximiser l'impact du dispositif.</p>
 
@@ -140,15 +183,15 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 04 : AG2R LA MONDIALE -->
+    <!-- CHAPITRE 05 : AG2R LA MONDIALE — TOUR DE FRANCE -->
     <section class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
-            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Video_by_ag2rlamondiale_atoutesallures_1.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
             <div class="vignette-overlay"></div>
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[04] BRAND CONTENT & ACTIVATION</span>
+                    <span class="editorial-tag">[05] BRAND CONTENT & ACTIVATION • CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
                     <p class="editorial-paragraph">Lancement de séries de contenus multi-plateformes (budget de 30 k€) et gestion opérationnelle d'envergure sur les routes du Tour de France avec ASO et la FFC.</p>
 
@@ -163,6 +206,93 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 06 : AG2R LA MONDIALE — ESCRIME -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[06] BRAND CONTENT & ACTIVATION • ESCRIME</span>
+                    <h2 class="editorial-title">AG2R LA MONDIALE <br> ESCRIME</h2>
+                    <p class="editorial-paragraph">Production de contenu pour l'activation du partenariat AG2R La Mondiale autour de l'escrime, une autre facette de l'engagement sportif de la marque.</p>
+
+                    <div class="cta-row">
+                        <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403751/AQOv4a8SJn-4LG8jIH3kH-hbs23ags-EHiIdbIcLAvJqaSkhAlHnpC89aJCdTEVVLdG5VGmHiXZ7wnHjPWJuitOGEDMo2qjnstw.mp4" target="_blank" rel="noopener" class="cta-link">Voir l'autre format</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 07 : BPCE — DÉFI IMAGE 2025 -->
+    <section class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[07] BRAND CONTENT • BANQUE</span>
+                    <h2 class="editorial-title">BPCE <br> DÉFI IMAGE 2025</h2>
+                    <p class="editorial-paragraph">Contribution à la campagne Défi Image 2025 du groupe BPCE : production de contenu au service d'un dispositif de marque à forte visibilité.</p>
+
+                    <div class="cta-row">
+                        <a href="https://youtu.be/gFSxKDotrck" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film complet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES & EXPÉRIENCE -->
+    <section class="relative py-32 px-8 md:px-24 bg-black z-10">
+        <div class="story-beat max-w-4xl">
+            <span class="editorial-tag">PROFIL</span>
+            <h2 class="editorial-title">COMPÉTENCES <br> & EXPÉRIENCE</h2>
+            <p class="editorial-paragraph">Près de 3 ans d'expérience cumulée en marketing et communication sportive, entre stage et alternance : une progression exécution → conception → coordination, menée à la fois chez l'annonceur et en agence. De quoi comprendre comment une marque décide d'investir dans le sport, et comment on sert cette demande sous contrainte de délai et de budget. Un ancrage terrain réel — Tour de France sur deux éditions, media days, fan zones, événements corporate — dans un secteur où c'est un critère de recrutement à part entière.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 max-w-5xl mt-12">
+            <div class="skill-card">
+                <h3>Production de contenu</h3>
+                <p>Du brief à la livraison, pratiquée côté annonceur et côté agence, y compris en pilotage de studio externe.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Écriture & idéation éditoriale</h3>
+                <p>Récurrente sur quatre comptes et deux marques, du blog au contenu social.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Coordination de prestataires</h3>
+                <p>Agences événementielles, studios, production, plateformes — quatre types de relations différentes.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Opérationnel événementiel</h3>
+                <p>Logistique, bénévoles, hospitalité, déroulé sur site, sur des événements à forte exposition.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Community management</h3>
+                <p>Publication et animation, base du premier poste, consolidée sur la durée.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Relation ayants droit</h3>
+                <p>ASO, équipe cycliste, clubs, ligues — sur des sujets concrets et récurrents.</p>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="skill-card">
+                <h3>Spécialisation cyclisme</h3>
+                <p>Équipe professionnelle, plateforme de marque, activations Tour de France sur plusieurs éditions, fan zone : une niche d'expertise avec un écosystème et des codes propres.</p>
+            </div>
+            <div class="skill-card">
+                <h3>Polyvalence multi-comptes</h3>
+                <p>Gestion simultanée de comptes hétérogènes — banque, énergéticien, armateur, logisticien — sur des propriétés allant du rugby au football en passant par le cyclisme.</p>
             </div>
         </div>
     </section>
