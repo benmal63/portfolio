@@ -98,6 +98,11 @@
         .mosaic-caption { position: absolute; left: 0; right: 0; bottom: 0; padding: 0.9rem 1rem; }
         .mosaic-num { display: block; font-family: 'Syncopate', sans-serif; font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin-bottom: 0.25rem; }
         .mosaic-name { font-family: 'Syncopate', sans-serif; font-size: clamp(0.8rem, 2vw, 1.1rem); font-weight: 700; text-transform: uppercase; color: #fff; line-height: 1.2; }
+
+        /* Portrait */
+        .portrait-duo { display: flex; gap: 0.75rem; max-width: 20rem; }
+        .portrait-duo img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; filter: grayscale(1) contrast(1.05); border: 1px solid rgba(255,255,255,0.15); }
+        .portrait-duo img:first-child { margin-top: 1.5rem; }
     </style>
 </head>
 <body>
@@ -405,10 +410,16 @@
 
     <!-- MON PARCOURS — RÉCIT -->
     <section id="parcours" class="relative py-32 px-8 md:px-24 bg-black z-10">
-        <div class="story-beat max-w-3xl">
-            <span class="editorial-tag">MON PARCOURS</span>
-            <h2 class="editorial-title">RACONTER LE SPONSORING <br> DES DEUX CÔTÉS</h2>
-            <p class="editorial-paragraph">J'ai commencé par l'intérieur — chez l'annonceur, là où une marque décide d'investir dans le sport et d'exploiter ses droits. Puis je suis passé de l'autre côté du miroir, en agence, à exécuter ces mêmes choix pour le compte d'autres marques, sous contrainte de délai et de budget. Peu de profils à mon niveau d'expérience ont vu les deux visages du métier. Voici comment je les raconte.</p>
+        <div class="grid md:grid-cols-[auto_1fr] gap-8 md:gap-14 items-start">
+            <div class="portrait-duo story-beat">
+                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/WhatsApp_Image_2025-05-06_at_11.18.30_1.jpg" alt="Benjamin Malet">
+                <img src="https://res.cloudinary.com/bmzztvpy/image/upload/v1789410695/1669107665911.jpg" alt="Benjamin Malet">
+            </div>
+            <div class="story-beat max-w-3xl">
+                <span class="editorial-tag">MON PARCOURS</span>
+                <h2 class="editorial-title">RACONTER LE SPONSORING <br> DES DEUX CÔTÉS</h2>
+                <p class="editorial-paragraph">J'ai commencé par l'intérieur — chez l'annonceur, là où une marque décide d'investir dans le sport et d'exploiter ses droits. Puis je suis passé de l'autre côté du miroir, en agence, à exécuter ces mêmes choix pour le compte d'autres marques, sous contrainte de délai et de budget. Peu de profils à mon niveau d'expérience ont vu les deux visages du métier. Voici comment je les raconte.</p>
+            </div>
         </div>
 
         <div class="marquee">
