@@ -59,6 +59,20 @@
 
         .pull-quote { font-family: 'Syncopate', sans-serif; font-size: clamp(1.05rem, 2vw, 1.4rem); line-height: 1.5; border-left: 2px solid #fff; padding-left: 1.5rem; margin: 1.75rem 0; max-width: 34rem; color: #fff; text-transform: uppercase; letter-spacing: -0.01em; }
 
+        /* Origine — infographie */
+        .origin-intro { max-width: 44rem; margin-bottom: 2.5rem; }
+        .origin-grid { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; max-width: 60rem; }
+        .origin-grid::before { content: ''; position: absolute; top: 1.5rem; left: 8%; right: 8%; height: 1px; background: rgba(255,255,255,0.15); z-index: 0; }
+        .origin-step { position: relative; z-index: 1; }
+        .origin-icon { position: relative; z-index: 1; width: 3rem; height: 3rem; border: 1px solid rgba(255,255,255,0.35); border-radius: 50%; background: #000; display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+        .origin-icon svg { width: 1.3rem; height: 1.3rem; stroke: #fff; fill: none; stroke-width: 1.5; }
+        .origin-step h4 { font-family: 'Syncopate', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.6rem; color: #fff; }
+        .origin-step p { font-size: 0.95rem; line-height: 1.6; color: rgba(255,255,255,0.7); }
+        @media (max-width: 767px) {
+            .origin-grid { grid-template-columns: 1fr; gap: 2.25rem; }
+            .origin-grid::before { display: none; }
+        }
+
         /* Jauge de progression */
         .progress-track { position: fixed; top: 0; left: 0; width: 4px; height: 100%; z-index: 100; background: rgba(255,255,255,0.08); }
         .progress-fill { position: absolute; top: 0; left: 0; width: 100%; height: 0%; background: linear-gradient(180deg, #7dd3fc, #fff, #7dd3fc); background-size: 100% 200%; animation: progressShimmer 3s linear infinite; box-shadow: 0 0 10px rgba(125,211,252,0.7), 0 0 2px rgba(255,255,255,0.9); transition: height 0.1s linear; }
@@ -249,7 +263,36 @@
             </div>
         </div>
 
-        <div class="marquee">
+        <div class="story-beat origin-intro mt-16">
+            <span class="editorial-tag">POURQUOI LE SPORT</span>
+            <p class="editorial-paragraph mb-0">Le sport, chez moi, ça n'a jamais été une simple histoire de compétition. Ce qui m'a toujours fasciné, c'est ce qui se passe autour : les coulisses des grands événements, tout ce qu'on ne voit pas depuis les tribunes.</p>
+        </div>
+
+        <div class="origin-grid story-beat mt-10">
+            <div class="origin-step">
+                <div class="origin-icon">
+                    <svg viewBox="0 0 24 24"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+                </div>
+                <h4>Les coulisses, pas le classement</h4>
+                <p>Ce qui m'attirait dans le sport, ce n'était pas le résultat sur le terrain, c'était l'organisation derrière : la logistique, les partenaires, la mise en scène d'un événement.</p>
+            </div>
+            <div class="origin-step">
+                <div class="origin-icon">
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg>
+                </div>
+                <h4>Un objectif écrit noir sur blanc</h4>
+                <p>Dans mes dossiers de projet professionnel, l'objectif était déjà là : travailler un jour sur le Tour de France.</p>
+            </div>
+            <div class="origin-step">
+                <div class="origin-icon">
+                    <svg viewBox="0 0 24 24"><polygon points="12 2 15 10 12 22 9 10 12 2"/></svg>
+                </div>
+                <h4>Paris, et la découverte du sport business</h4>
+                <p>En arrivant à Paris, j'ai découvert l'univers du sport business — et compris que ma place était là, entre les marques et les événements.</p>
+            </div>
+        </div>
+
+        <div class="marquee mt-16">
             <div class="marquee-track">
                 <span>RELATION AYANTS DROIT</span><span>PLAN D'ACTIVATION</span><span>GESTION DE COMPTE ANNONCEUR</span><span>ÉVÉNEMENTIEL & OPÉRATIONNEL</span><span>NÉGOCIATION</span><span>COORDINATION DE PRESTATAIRES</span>
                 <span>RELATION AYANTS DROIT</span><span>PLAN D'ACTIVATION</span><span>GESTION DE COMPTE ANNONCEUR</span><span>ÉVÉNEMENTIEL & OPÉRATIONNEL</span><span>NÉGOCIATION</span><span>COORDINATION DE PRESTATAIRES</span>
