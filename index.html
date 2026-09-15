@@ -665,6 +665,16 @@
 
         document.querySelectorAll('.story-beat').forEach(beat => observer.observe(beat));
 
+        // Timeline CV : ouverture automatique au scroll
+        const cvObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.open = true;
+                }
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.cv-item').forEach(item => cvObserver.observe(item));
+
         // Sommaire
         const navToggle = document.getElementById('navToggle');
         const navOverlay = document.getElementById('navOverlay');
