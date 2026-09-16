@@ -89,15 +89,15 @@
         @keyframes chevronBounce { 0%, 100% { transform: rotate(45deg) translate(0, 0); opacity: 0.5; } 50% { transform: rotate(45deg) translate(6px, 6px); opacity: 1; } }
 
         /* Sommaire / navigation */
-        .nav-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(6px); font-size: 1.25rem; transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+        .nav-toggle { position: fixed; top: 1.5rem; right: 1.5rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.4); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; backdrop-filter: blur(6px); font-size: 1.25rem; box-shadow: 0 2px 12px rgba(0,0,0,0.5); transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
         .nav-toggle:hover { border-color: #fff; box-shadow: 0 0 16px rgba(255,255,255,0.35); transform: scale(1.06); }
-        .avatar-bubble { position: fixed; top: 1.5rem; right: 5.25rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.4); display: block; transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
+        .avatar-bubble { position: fixed; top: 1.5rem; right: 5.25rem; z-index: 200; width: 3rem; height: 3rem; border-radius: 9999px; overflow: hidden; border: 1px solid rgba(255,255,255,0.5); display: block; background: rgba(0,0,0,0.75); box-shadow: 0 2px 12px rgba(0,0,0,0.5); transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease; }
         .avatar-bubble:hover { border-color: #fff; box-shadow: 0 0 16px rgba(125,211,252,0.5); transform: scale(1.06); }
         .avatar-bubble img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; filter: grayscale(0.2); transition: filter 0.2s ease; }
         .avatar-bubble:hover img { filter: grayscale(0); }
 
         /* Contact flottant, visible sur tout le site */
-        .contact-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 200; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: rgba(0,0,0,0.6); border: 1px solid rgba(255,255,255,0.35); color: #fff; text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; backdrop-filter: blur(6px); transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease, background 0.25s ease; }
+        .contact-float { position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 200; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px; background: rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.45); color: #fff; text-decoration: none; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; backdrop-filter: blur(6px); box-shadow: 0 2px 14px rgba(0,0,0,0.6); transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease, background 0.25s ease; }
         .contact-float::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #7dd3fc; box-shadow: 0 0 8px 2px rgba(125,211,252,0.7); animation: contactPulse 2s infinite ease-in-out; }
         .contact-float:hover { border-color: #fff; background: #fff; color: #000; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,255,255,0.2); }
         .contact-float:hover::before { background: #000; box-shadow: none; }
@@ -371,7 +371,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[01] TOTALENERGIES — RUGBY</span>
                     <h2 class="editorial-title">LE DÉFI <br> DE L'IMPOSTEUR</h2>
-                    <p class="editorial-paragraph">Sur le compte TotalEnergies, j'ai porté de bout en bout le media day organisé à Pau avec la Section Paloise : mettre en scène les joueurs cadres face à un casting de supporters, et laisser le public démasquer l'intrus. J'ai imaginé le format, suivi le tournage aux côtés de la production, géré la post-production, et contribué à présenter le plan d'activation annuel au client.</p>
+                    <p class="editorial-paragraph">Sur le compte TotalEnergies, j'ai participé de bout en bout au media day organisé à Pau avec la Section Paloise : mettre en scène les joueurs cadres face à un casting de supporters, et laisser le public démasquer l'intrus. Aux côtés de la production, j'ai contribué à l'idée du format, suivi le tournage, participé à la post-production, et à la présentation du plan d'activation annuel au client.</p>
                     <p class="editorial-paragraph">Au-delà du media day, j'ai alimenté la prise de parole sociale de la Section Paloise à l'occasion des matchs à l'extérieur (10 à 15 postes par an) : jeux concours, carrousels en story pour animer les déplacements — la ville, l'adversaire, ce qu'il fallait retenir — et carrousels en feed pour raconter l'histoire du club.</p>
 
                     <div class="metrics-grid">
@@ -407,8 +407,8 @@
             <div class="relative z-10 w-full">
                 <div class="story-beat">
                     <span class="editorial-tag">[02] INFLUENCE & CRÉATION — CYCLISME</span>
-                    <h2 class="editorial-title">CMA CGM <br> CONTAINER CHALLENGE</h2>
-                    <p class="editorial-paragraph">Sur le volet Décathlon du compte CMA CGM, j'ai idéé et écrit des contenus alignés sur la stratégie de la marque et retravaillé le plan d'activation. J'ai orchestré autour du dispositif une campagne d'influence ciblée, du sourcing des créateurs à leur activation, pour maximiser la résonance d'un format gamifié et disruptif.</p>
+                    <h2 class="editorial-title">CMA CGM × DÉCATHLON <br> CONTAINER CHALLENGE</h2>
+                    <p class="editorial-paragraph">Sur le volet Décathlon du compte CMA CGM, j'ai contribué à l'idéation et à l'écriture de contenus alignés sur la stratégie de la marque, et participé au retravail du plan d'activation. J'ai pris part à l'orchestration, autour du dispositif, d'une campagne d'influence ciblée, du sourcing des créateurs à leur activation, pour maximiser sa résonance.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -438,8 +438,8 @@
             <div class="relative z-10 w-full">
                 <div class="story-beat">
                     <span class="editorial-tag">[03] BRAND CONTENT — CYCLISME</span>
-                    <h2 class="editorial-title">CMA CGM <br> FILM MANIFESTO</h2>
-                    <p class="editorial-paragraph">Pour marquer l'arrivée de CMA CGM dans le cyclisme, aux côtés de Décathlon sur la Decathlon CMA CGM Team, j'ai lancé un film manifeste : poser en image l'ambition du partenariat avant de la décliner dans des dispositifs comme le Container Challenge.</p>
+                    <h2 class="editorial-title">CMA CGM × DÉCATHLON <br> FILM MANIFESTO</h2>
+                    <p class="editorial-paragraph">Pour marquer l'arrivée de CMA CGM dans le cyclisme, aux côtés de Décathlon sur la Decathlon CMA CGM Team, j'ai contribué au lancement d'un film manifeste : poser en image l'ambition du partenariat avant de la décliner dans des dispositifs comme le Container Challenge.</p>
 
                     <div class="cta-row">
                         <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789568792/linkedin-video-976kbps.mp4" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
@@ -458,8 +458,8 @@
             <div class="relative z-10 w-full">
                 <div class="story-beat">
                     <span class="editorial-tag">[04] PRODUCTION DE CONTENU — CYCLISME</span>
-                    <h2 class="editorial-title">CMA CGM <br> TEAM</h2>
-                    <p class="editorial-paragraph">Au-delà des dispositifs de marque, j'ai produit des contenus directement avec les coureurs de l'équipe — comme ce portrait de Paul Seixas, où l'on va chercher au-delà de la performance pour raconter l'état d'esprit du coureur.</p>
+                    <h2 class="editorial-title">CMA CGM × DÉCATHLON <br> CMA CGM TEAM</h2>
+                    <p class="editorial-paragraph">Au-delà des dispositifs de marque, j'ai participé à la production de contenus directement avec les coureurs de l'équipe — comme ce portrait de Paul Seixas, où l'on va chercher au-delà de la performance pour raconter l'état d'esprit du coureur.</p>
 
                     <div class="cta-row">
                         <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403236/Paul_Seixas_unfiltered_the_mindset_behind_the_rider.mp4" target="_blank" rel="noopener" class="cta-link">Voir le portrait</a>
@@ -479,7 +479,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[05] PRODUCTION DE CONTENU — FOOTBALL</span>
                     <h2 class="editorial-title">CMA CGM <br> OLYMPIQUE DE MARSEILLE</h2>
-                    <p class="editorial-paragraph">J'ai lancé le compte CMA CGM en parallèle de mes autres missions, en commençant par l'Olympique de Marseille. J'ai préparé, idéé et écrit des contenus autour des grands rendez-vous du club — la Ligue des champions, les affiches marquantes de Ligue 1 — en pilotant la relation avec un studio créatif, les allers-retours de validation et le suivi de production.</p>
+                    <p class="editorial-paragraph">J'ai participé au lancement du compte CMA CGM en parallèle de mes autres missions, en commençant par l'Olympique de Marseille. Aux côtés d'un studio créatif, j'ai contribué à préparer, idéer et écrire des contenus autour des grands rendez-vous du club — la Ligue des champions, les affiches marquantes de Ligue 1 — sur les allers-retours de validation et le suivi de production.</p>
 
                     <div class="cta-row">
                         <a href="https://www.youtube.com/watch?v=O7jgOmnAeDE" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film</a>
@@ -500,7 +500,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[06] EXÉCUTION & AMPLIFICATION — FORMULE 1</span>
                     <h2 class="editorial-title">CEVA X SCUDERIA FERRARI HP <br> PERFECT MATCH</h2>
-                    <p class="editorial-paragraph">J'ai repris le compte CEVA Logistics avec un plan d'activation déjà posé pour le partenariat Scuderia Ferrari HP : ma mission a été de l'exécuter. J'ai écrit les contenus, piloté leur production, géré les allers-retours de validation avec le client, et suivi le prestataire en charge de la plateforme — avant de construire et déployer un plan d'amplification combinant influence, campagne payante et contenus, puis de contribuer au plan de la saison suivante.</p>
+                    <p class="editorial-paragraph">J'ai rejoint le compte CEVA Logistics avec un plan d'activation déjà posé pour le partenariat Scuderia Ferrari HP : ma mission a été de participer à son exécution. J'ai écrit des contenus, contribué à leur production et aux allers-retours de validation avec le client, et suivi le prestataire en charge de la plateforme — avant de participer à la construction et au déploiement d'un plan d'amplification combinant influence, campagne payante et contenus, puis de contribuer au plan de la saison suivante.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -527,7 +527,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[07] ACTIVATION DE DROITS — CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
-                    <p class="editorial-paragraph">Sur deux éditions du Tour de France, 2023 et 2024, j'ai piloté l'activation de parkings à vélo mis à disposition du public, en partenariat avec ASO. J'ai géré l'intégration technique entre le site Vivons Vélo et celui d'ASO pour permettre la réservation, négocié une mise en avant éditoriale sur les supports de l'ayant droit, et assuré l'hospitalité et les relations publiques sur place.</p>
+                    <p class="editorial-paragraph">Sur deux éditions du Tour de France, 2023 et 2024, j'ai participé au pilotage de l'activation de parkings à vélo mis à disposition du public, en partenariat avec ASO. J'ai contribué à l'intégration technique entre le site Vivons Vélo et celui d'ASO pour permettre la réservation, à la négociation d'une mise en avant éditoriale sur les supports de l'ayant droit, et à l'hospitalité et aux relations publiques sur place.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -558,7 +558,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[08] COMMUNAUTÉ DE MARQUE — CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> VIVONS VÉLO</h2>
-                    <p class="editorial-paragraph">J'ai animé la communauté Vivons Vélo, digitale et physique, sur cinq dates annuelles pilotées avec une agence partenaire — dont j'ai co-construit la refonte, en passant de plusieurs événements par date à un événement unique, plus fort. En parallèle, j'ai alimenté le blog et le site de la plateforme, avec plus d'une centaine de contenus produits sur l'année pour nourrir les réseaux sociaux.</p>
+                    <p class="editorial-paragraph">J'ai contribué à l'animation de la communauté Vivons Vélo, digitale et physique, sur cinq dates annuelles pilotées avec une agence partenaire — dont j'ai co-construit la refonte, en passant de plusieurs événements par date à un événement unique, plus fort. En parallèle, j'ai participé à l'alimentation du blog et du site de la plateforme, avec plus d'une centaine de contenus produits sur l'année pour nourrir les réseaux sociaux.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
@@ -593,7 +593,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[09] PRODUCTION DE CONTENU — ESCRIME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> ESCRIME</h2>
-                    <p class="editorial-paragraph">Au-delà du cyclisme, j'ai organisé des tournages avec les escrimeurs sous contrat de la marque — une autre facette du portefeuille sportif que je gérais chez AG2R La Mondiale, avec les mêmes exigences de production que sur l'équipe cycliste.</p>
+                    <p class="editorial-paragraph">Au-delà du cyclisme, j'ai participé à l'organisation de tournages avec les escrimeurs sous contrat de la marque — une autre facette du portefeuille sportif dont je m'occupais chez AG2R La Mondiale, avec les mêmes exigences de production que sur l'équipe cycliste.</p>
 
                     <div class="cta-row">
                         <a href="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403751/AQOv4a8SJn-4LG8jIH3kH-hbs23ags-EHiIdbIcLAvJqaSkhAlHnpC89aJCdTEVVLdG5VGmHiXZ7wnHjPWJuitOGEDMo2qjnstw.mp4" target="_blank" rel="noopener" class="cta-link">Voir l'autre format</a>
@@ -613,7 +613,7 @@
                 <div class="story-beat">
                     <span class="editorial-tag">[10] OPÉRATIONNEL ÉVÉNEMENTIEL — BANQUE</span>
                     <h2 class="editorial-title">BPCE <br> DÉFI IMAGE 2025</h2>
-                    <p class="editorial-paragraph">Ma première mission chez SPORTFIVE : accompagner la construction et la production de l'événement interne BPCE, édition Défi Image. J'ai géré la relation avec les prestataires, coordonné les bénévoles et les arbitres, et suivi la logistique sur site — la chaîne opérationnelle complète d'un événement, du montage au déroulé.</p>
+                    <p class="editorial-paragraph">Ma première mission chez SPORTFIVE : accompagner la construction et la production de l'événement interne BPCE, édition Défi Image. J'ai contribué à la relation avec les prestataires, à la coordination des bénévoles et des arbitres, et au suivi de la logistique sur site — la chaîne opérationnelle complète d'un événement, du montage au déroulé.</p>
 
                     <div class="cta-row">
                         <a href="https://youtu.be/gFSxKDotrck" target="_blank" rel="noopener" class="cta-link cta-solid">Voir le film complet</a>
