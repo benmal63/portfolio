@@ -111,10 +111,13 @@
         .nav-overlay a .nav-num { color: rgba(255,255,255,0.4); font-size: 0.75rem; margin-right: 1.5rem; }
 
         /* Accueil */
-        .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; filter: grayscale(0.25) brightness(0.75); transition: opacity 1.8s ease; }
+        .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; opacity: 0; filter: grayscale(0.25) brightness(0.75); transition: opacity 1.8s ease; animation: kenBurns 14s ease-in-out infinite alternate; }
         .hero-video.active { opacity: 0.4; }
+        @keyframes kenBurns { from { transform: scale(1); } to { transform: scale(1.12); } }
 
         .hero-fade { opacity: 0; animation: heroIn 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+        .hero-reveal { animation-name: heroReveal; }
+        @keyframes heroReveal { from { opacity: 0; clip-path: inset(0 0 100% 0); transform: translateY(24px); } to { opacity: 1; clip-path: inset(0 0 0% 0); transform: translateY(0); } }
         .hero-fade.delay-1 { animation-delay: 0.1s; }
         .hero-fade.delay-2 { animation-delay: 0.3s; }
         .hero-fade.delay-3 { animation-delay: 0.55s; }
@@ -185,7 +188,7 @@
 
         <div class="relative z-10">
             <span class="editorial-tag hero-fade delay-1">SPONSORING & BRAND ACTIVATION</span>
-            <h1 class="text-5xl md:text-8xl font-bold uppercase leading-none mb-4 font-['Syncopate'] hero-fade delay-2">Benjamin<br>Malet</h1>
+            <h1 class="text-5xl md:text-8xl font-bold uppercase leading-none mb-4 font-['Syncopate'] hero-fade delay-2 hero-reveal">Benjamin<br>Malet</h1>
             <p class="hero-roles hero-fade delay-3"><b>AG2R LA MONDIALE</b> (2023–2024) → <b>SPORTFIVE</b> (2025–2026)</p>
         </div>
 
@@ -654,7 +657,7 @@
                 heroVideos[heroIndex].classList.remove('active');
                 heroIndex = (heroIndex + 1) % heroVideos.length;
                 heroVideos[heroIndex].classList.add('active');
-            }, 5000);
+            }, 4000);
         }
 
     </script>
