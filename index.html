@@ -128,6 +128,9 @@
         .hero-roles b { color: #fff; font-weight: 700; }
         @keyframes heroIn { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
 
+        /* Fond sans vidéo */
+        .fallback-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(circle at 30% 20%, #1a1a1a 0%, #000 70%); }
+
         /* Mosaïque de projets */
         .mosaic-tile { position: relative; display: block; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #050505; transition: border-color 0.3s ease; }
         .mosaic-tile:hover { border-color: rgba(255,255,255,0.4); }
@@ -169,11 +172,12 @@
             <a href="#cma-team"><span><span class="nav-num">04</span>Decathlon CMA CGM Team</span></a>
             <a href="#cma-om"><span><span class="nav-num">05</span>CMA CGM × OM</span></a>
             <a href="#ceva"><span><span class="nav-num">06</span>CEVA × Scuderia Ferrari HP</span></a>
-            <a href="#ag2r-tdf"><span><span class="nav-num">07</span>AG2R LA MONDIALE · Tour de France</span></a>
-            <a href="#ag2r-vivons-velo"><span><span class="nav-num">08</span>AG2R LA MONDIALE · Vivons Vélo</span></a>
-            <a href="#ag2r-escrime"><span><span class="nav-num">09</span>AG2R LA MONDIALE · Escrime</span></a>
-            <a href="#bpce"><span><span class="nav-num">10</span>BPCE · Défi Image</span></a>
-            <a href="#contact"><span><span class="nav-num">11</span>Contact</span></a>
+            <a href="#ceva-mastermind"><span><span class="nav-num">07</span>CEVA Logistics Mastermind 2.0</span></a>
+            <a href="#ag2r-tdf"><span><span class="nav-num">08</span>AG2R LA MONDIALE · Tour de France</span></a>
+            <a href="#ag2r-vivons-velo"><span><span class="nav-num">09</span>AG2R LA MONDIALE · Vivons Vélo</span></a>
+            <a href="#ag2r-escrime"><span><span class="nav-num">10</span>AG2R LA MONDIALE · Escrime</span></a>
+            <a href="#bpce"><span><span class="nav-num">11</span>BPCE · Défi Image</span></a>
+            <a href="#contact"><span><span class="nav-num">12</span>Contact</span></a>
         </div>
     </nav>
 
@@ -333,25 +337,30 @@
                 <div class="mosaic-overlay"></div>
                 <div class="mosaic-caption"><span class="mosaic-num">06</span><span class="mosaic-name">CEVA × Scuderia Ferrari HP</span></div>
             </a>
+            <a href="#ceva-mastermind" class="mosaic-tile aspect-square">
+                <div class="fallback-bg"></div>
+                <div class="mosaic-overlay"></div>
+                <div class="mosaic-caption"><span class="mosaic-num">07</span><span class="mosaic-name">Logistics Mastermind 2.0</span></div>
+            </a>
             <a href="#ag2r-tdf" class="mosaic-tile aspect-square">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">07</span><span class="mosaic-name">AG2R LA MONDIALE · Tour de France</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">08</span><span class="mosaic-name">AG2R LA MONDIALE · Tour de France</span></div>
             </a>
             <a href="#ag2r-vivons-velo" class="mosaic-tile aspect-square">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Video_by_ag2rlamondiale_atoutesallures.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">08</span><span class="mosaic-name">AG2R LA MONDIALE · Vivons Vélo</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">09</span><span class="mosaic-name">AG2R LA MONDIALE · Vivons Vélo</span></div>
             </a>
             <a href="#ag2r-escrime" class="mosaic-tile aspect-square">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">09</span><span class="mosaic-name">AG2R LA MONDIALE · Escrime</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">10</span><span class="mosaic-name">AG2R LA MONDIALE · Escrime</span></div>
             </a>
             <a href="#bpce" class="mosaic-tile aspect-square col-span-2">
                 <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline></video>
                 <div class="mosaic-overlay"></div>
-                <div class="mosaic-caption"><span class="mosaic-num">10</span><span class="mosaic-name">BPCE · Défi Image</span></div>
+                <div class="mosaic-caption"><span class="mosaic-num">11</span><span class="mosaic-name">BPCE · Défi Image</span></div>
             </a>
         </div>
     </section>
@@ -401,18 +410,18 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[02] INFLUENCE & CRÉATION · CYCLISME</span>
+                    <span class="editorial-tag">[02] CRÉATION & ACTIVATION · CYCLISME</span>
                     <h2 class="editorial-title">CMA CGM × DÉCATHLON <br> CONTAINER CHALLENGE</h2>
-                    <p class="editorial-paragraph">Sur le volet Décathlon du compte CMA CGM, j'ai contribué à l'idéation et à l'écriture de contenus alignés sur la stratégie de la marque, et participé au retravail du plan d'activation. J'ai pris part à l'orchestration, autour du dispositif, d'une campagne d'influence ciblée, du sourcing des créateurs à leur activation, pour maximiser sa résonance.</p>
+                    <p class="editorial-paragraph">Sur le volet Décathlon du compte CMA CGM, j'ai contribué à l'idéation et à l'écriture de contenus alignés sur la stratégie de la marque, et participé au retravail du plan d'activation autour du dispositif Container Challenge. J'ai aussi participé à la fan zone produite par CMA CGM pendant le Tour de France pour la Decathlon CMA CGM Team, avec une déclinaison événementielle et un jeu phygital du contenu Container Challenge.</p>
 
                     <div class="metrics-grid">
                         <div class="metric-box">
                             <span class="metric-val">360°</span>
-                            <span class="metric-label">Owned, Earned, Paid</span>
+                            <span class="metric-label">Contenu, digital & terrain</span>
                         </div>
                         <div class="metric-box">
-                            <span class="metric-val">Créateurs</span>
-                            <span class="metric-label">Campagne d'influence</span>
+                            <span class="metric-val">Fan zone TDF</span>
+                            <span class="metric-label">Déclinaison phygitale</span>
                         </div>
                     </div>
 
@@ -512,7 +521,23 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 07 : AG2R LA MONDIALE — TOUR DE FRANCE -->
+    <!-- CHAPITRE 07 : CEVA LOGISTICS MASTERMIND 2.0 -->
+    <section id="ceva-mastermind" class="relative h-[200vh]">
+        <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
+            <div class="fallback-bg"></div>
+            <div class="vignette-overlay"></div>
+
+            <div class="relative z-10 w-full">
+                <div class="story-beat">
+                    <span class="editorial-tag">[07] GAMIFICATION · RECRUTEMENT</span>
+                    <h2 class="editorial-title">CEVA LOGISTICS <br> LOGISTICS MASTERMIND 2.0</h2>
+                    <p class="editorial-paragraph">Pour faire connaître les métiers de CEVA Logistics, j'ai participé à la création de Logistics Mastermind 2.0, un jeu digital pensé pour donner à découvrir, de façon ludique, les différents métiers du groupe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAPITRE 08 : AG2R LA MONDIALE — TOUR DE FRANCE -->
     <section id="ag2r-tdf" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Tour_de_FranceTM_-____Cette_anne_e_encore_AG2RLAMONDIALE_et_le_Tour_de_France_vous_accom_RtuFdG.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -520,7 +545,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[07] ACTIVATION DE DROITS · CYCLISME</span>
+                    <span class="editorial-tag">[08] ACTIVATION DE DROITS · CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> TOUR DE FRANCE</h2>
                     <p class="editorial-paragraph">Sur deux éditions du Tour de France, 2023 et 2024, j'ai participé au pilotage de l'activation de parkings à vélo mis à disposition du public, en partenariat avec ASO. J'ai contribué à l'intégration technique entre le site Vivons Vélo et celui d'ASO pour permettre la réservation, à la négociation d'une mise en avant éditoriale sur les supports de l'ayant droit, et à l'hospitalité et aux relations publiques sur place.</p>
 
@@ -543,7 +568,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 08 : AG2R LA MONDIALE — VIVONS VÉLO -->
+    <!-- CHAPITRE 09 : AG2R LA MONDIALE — VIVONS VÉLO -->
     <section id="ag2r-vivons-velo" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403233/Video_by_ag2rlamondiale_atoutesallures.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -551,7 +576,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[08] COMMUNAUTÉ DE MARQUE · CYCLISME</span>
+                    <span class="editorial-tag">[09] COMMUNAUTÉ DE MARQUE · CYCLISME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> VIVONS VÉLO</h2>
                     <p class="editorial-paragraph">J'ai contribué à l'animation de la communauté Vivons Vélo, digitale et physique, sur cinq dates annuelles pilotées avec une agence partenaire, dont j'ai co-construit la refonte, en passant de plusieurs événements par date à un événement unique, plus fort. En parallèle, j'ai participé à l'alimentation du blog et du site de la plateforme, avec plus d'une centaine de contenus produits sur l'année pour nourrir les réseaux sociaux.</p>
 
@@ -578,7 +603,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 09 : AG2R LA MONDIALE — ESCRIME -->
+    <!-- CHAPITRE 10 : AG2R LA MONDIALE — ESCRIME -->
     <section id="ag2r-escrime" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789403807/AQO8tFtv_tws-7mKq13WIC2edRxVM56pGLbnNZc0eUNPBk6ufkN3sGsXcdG7nSdhdTynZR4uhnLFzpjMUAGX4Fub.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -586,7 +611,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[09] PRODUCTION DE CONTENU · ESCRIME</span>
+                    <span class="editorial-tag">[10] PRODUCTION DE CONTENU · ESCRIME</span>
                     <h2 class="editorial-title">AG2R LA MONDIALE <br> ESCRIME</h2>
                     <p class="editorial-paragraph">Au-delà du cyclisme, j'ai participé à l'organisation de tournages avec les escrimeurs sous contrat de la marque, une autre facette du portefeuille sportif dont je m'occupais chez AG2R La Mondiale, avec les mêmes exigences de production que sur l'équipe cycliste.</p>
 
@@ -598,7 +623,7 @@
         </div>
     </section>
 
-    <!-- CHAPITRE 10 : BPCE — DÉFI IMAGE 2025 -->
+    <!-- CHAPITRE 11 : BPCE — DÉFI IMAGE 2025 -->
     <section id="bpce" class="relative h-[200vh]">
         <div class="sticky top-0 h-screen w-full overflow-hidden flex items-center px-8 md:px-24">
             <video src="https://res.cloudinary.com/bmzztvpy/video/upload/v1789408260/Video_Project_2.mp4" autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover z-0"></video>
@@ -606,7 +631,7 @@
 
             <div class="relative z-10 w-full">
                 <div class="story-beat">
-                    <span class="editorial-tag">[10] OPÉRATIONNEL ÉVÉNEMENTIEL · BANQUE</span>
+                    <span class="editorial-tag">[11] OPÉRATIONNEL ÉVÉNEMENTIEL · BANQUE</span>
                     <h2 class="editorial-title">BPCE <br> DÉFI IMAGE 2025</h2>
                     <p class="editorial-paragraph">Ma première mission chez SPORTFIVE : accompagner la construction et la production de l'événement interne BPCE, édition Défi Image. J'ai contribué à la relation avec les prestataires, à la coordination des bénévoles et des arbitres, et au suivi de la logistique sur site : la chaîne opérationnelle complète d'un événement, du montage au déroulé.</p>
 
